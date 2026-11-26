@@ -1,5 +1,5 @@
-const CACHE_NAME = 'happy-shopping-shell-v3';
-const APP_FILES = ['./', './index.html', './supabase-config.js', './auth-cloud.js', './bootstrap.js', './styles.css', './app.js', './quotes.js', './manifest.webmanifest', './assets/icon.svg'];
+const CACHE_NAME = 'happy-shopping-shell-v4';
+const APP_FILES = ['./', './index.html', './supabase-config.js', './auth-cloud.js', './bootstrap.js', './styles.css', './responsive.css', './app.js', './quotes.js', './mobile-nav.js', './manifest.webmanifest', './assets/icon.svg'];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_FILES))));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))))));
 self.addEventListener('fetch', event => {
