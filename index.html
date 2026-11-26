@@ -39,7 +39,7 @@
       <header class="topbar">
         <button class="icon-button menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
         <div class="breadcrumb"><span>Gestion</span><b>/</b><strong id="pageTitle">Tableau de bord</strong></div>
-        <div class="top-actions"><span class="today-label" id="todayLabel"></span><button class="icon-button help-button" title="Aide">?</button><div class="top-avatar">HS</div></div>
+        <div class="top-actions"><span class="today-label" id="todayLabel"></span><span id="cloudAccount"></span></div>
       </header>
       <section id="appContent" class="content" aria-live="polite"></section>
       <footer class="app-footer"><span>HAPPY SHOPPING · Libreville, Gabon</span><span>Application de gestion interne</span></footer>
@@ -47,6 +47,10 @@
   </div>
   <div id="modalRoot"></div>
   <div id="toastRoot" class="toast-root" aria-live="polite"></div>
+  <div id="authRoot"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="auth-cloud.js" defer></script>
   <script src="bootstrap.js" defer></script>
   <script src="app.js" defer></script>
   <script src="quotes.js" defer></script>
