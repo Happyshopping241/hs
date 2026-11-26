@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f16d4b">
+  <meta name="description" content="Application interne de gestion HAPPY SHOPPING — Libreville, Gabon.">
+  <title>HAPPY SHOPPING — Gestion</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="HAPPY SHOPPING, accueil">
+        <span class="brand-mark">H<span>♥</span></span>
+        <span class="brand-copy"><strong>HAPPY SHOPPING</strong><small>Gestion commerciale</small></span>
+      </a>
+      <div class="nav-label">MENU PRINCIPAL</div>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">▦</span>Tableau de bord</button>
+        <button class="nav-item" data-view="products"><span class="nav-icon">▧</span>Produits</button>
+        <button class="nav-item" data-view="stock"><span class="nav-icon">⇅</span>Stocks</button>
+        <button class="nav-item" data-view="orders"><span class="nav-icon">▤</span>Ventes & commandes</button>
+        <button class="nav-item" data-view="clients"><span class="nav-icon">♙</span>Clients</button>
+        <button class="nav-item" data-view="deliveries"><span class="nav-icon">↗</span>Livraisons</button>
+        <button class="nav-item" data-view="suppliers"><span class="nav-icon">♧</span>Fournisseurs</button>
+        <button class="nav-item" data-view="reports"><span class="nav-icon">▥</span>Rapports</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="setup-card"><span class="setup-icon">✦</span><strong>Votre boutique, en un coup d'œil</strong><p>Gardez vos produits et vos ventes bien organisés.</p><button class="text-button" data-view="settings">Configurer la boutique <span>→</span></button></div>
+        <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span>Paramètres</button>
+        <div class="profile"><div class="avatar">HS</div><div><strong>Administrateur</strong><small>Happy Shopping</small></div><span class="profile-more">···</span></div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-button menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">☰</button>
+        <div class="breadcrumb"><span>Gestion</span><b>/</b><strong id="pageTitle">Tableau de bord</strong></div>
+        <div class="top-actions"><span class="today-label" id="todayLabel"></span><button class="icon-button help-button" title="Aide">?</button><div class="top-avatar">HS</div></div>
+      </header>
+      <section id="appContent" class="content" aria-live="polite"></section>
+      <footer class="app-footer"><span>HAPPY SHOPPING · Libreville, Gabon</span><span>Application de gestion interne</span></footer>
+    </main>
+  </div>
+  <div id="modalRoot"></div>
+  <div id="toastRoot" class="toast-root" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
